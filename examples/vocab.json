@@ -1,0 +1,10 @@
+{
+  "name": "film-pipeline",
+  "version": "1.0.0",
+  "terms": [
+    { "term": "shot", "definition": "A continuous camera take between two cuts.", "domain": "editing", "forbidden": ["clip", "scene cut"] },
+    { "term": "verdict", "definition": "Final pass/fail decision of a gate.", "domain": "governance", "forbidden": ["outcome", "ruling"] },
+    { "term": "gate", "definition": "Deterministic check that must pass before delivery.", "domain": "governance", "forbidden": ["checkpoint"] }
+  ],
+  "enums": { "kind": ["entity", "rule", "question"] }
+}

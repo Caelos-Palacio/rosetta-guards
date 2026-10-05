@@ -1,0 +1,14 @@
+{
+  "name": "bench-vocab",
+  "version": "1.0.0",
+  "terms": [
+    { "term": "shot", "definition": "A continuous take between two cuts.", "forbidden": ["clip", "scene cut", "take"] },
+    { "term": "verdict", "definition": "Final pass/fail decision of a gate.", "forbidden": ["outcome", "ruling", "judgement"] },
+    { "term": "gate", "definition": "Deterministic check required before delivery.", "forbidden": ["checkpoint", "barrier"] },
+    { "term": "ledger", "definition": "Append-only record of events.", "forbidden": ["journal", "event log", "audit trail"] },
+    { "term": "artifact", "definition": "A file produced by a pipeline step.", "forbidden": ["deliverable", "output file"] },
+    { "term": "agent", "definition": "An automated worker that executes a task.", "forbidden": ["bot", "worker", "assistant"] },
+    { "term": "reviewer", "definition": "An agent that audits another agent's output.", "forbidden": ["critic", "auditor"] },
+    { "term": "budget", "definition": "A limit on tokens or time.", "forbidden": ["quota", "allowance"] }
+  ]
+}

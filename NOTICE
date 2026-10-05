@@ -1,0 +1,9 @@
+rosetta-guards
+Copyright 2026 Caelos-Palacio
+
+Licensed under the Apache License, Version 2.0. See LICENSE.
+
+This is original code. It is inspired by the general ideas of controlled
+vocabularies and "reference invariants" (identifiers of a source document must
+survive in any derived document). It contains no code or text copied from other
+projects.

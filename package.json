@@ -1,0 +1,18 @@
+{
+  "name": "rosetta-guards",
+  "version": "0.1.0",
+  "description": "Deterministic guardrails for LLM context compaction: controlled vocabulary lint + identifier-loss detection. No LLM, no dependencies.",
+  "type": "module",
+  "main": "./src/index.mjs",
+  "exports": { ".": "./src/index.mjs" },
+  "bin": { "rosetta": "./bin/rosetta.mjs" },
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node --test test/ids.test.mjs test/guard.test.mjs test/vocab.test.mjs test/cli.test.mjs test/bench.test.mjs",
+    "bench": "node bench/run.mjs"
+  },
+  "keywords": ["llm", "context", "vocabulary", "guardrails", "determinism"],
+  "license": "Apache-2.0",
+  "author": "Caelos-Palacio",
+  "files": ["src", "bin", "examples", "NOTICE", "LICENSE"]
+}

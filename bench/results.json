@@ -1,0 +1,313 @@
+{
+  "config": {
+    "docs": 300,
+    "seed": 20260101,
+    "node": "v22.22.2",
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13420H",
+    "cores": 12
+  },
+  "profiles": {
+    "clean": {
+      "extraction": {
+        "ids": 6627,
+        "recall": 1,
+        "precision": 1,
+        "falsePositives": 0,
+        "recallByType": {
+          "code": 1,
+          "issue": 1,
+          "hash": 1,
+          "path": 1,
+          "url": 1,
+          "version": 1
+        }
+      },
+      "loss": [
+        {
+          "compaction": "benign: drop filler words",
+          "trueLostIds": 0,
+          "reported": 0,
+          "idRecall": null,
+          "idPrecision": null,
+          "docs": {
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 300
+          }
+        },
+        {
+          "compaction": "benign: drop id-free sentences",
+          "trueLostIds": 0,
+          "reported": 0,
+          "idRecall": null,
+          "idPrecision": null,
+          "docs": {
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 300
+          }
+        },
+        {
+          "compaction": "benign: strip backticks + collapse",
+          "trueLostIds": 0,
+          "reported": 0,
+          "idRecall": null,
+          "idPrecision": null,
+          "docs": {
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 300
+          }
+        },
+        {
+          "compaction": "lossy: drop 30% of sentences",
+          "trueLostIds": 1999,
+          "reported": 1999,
+          "idRecall": 1,
+          "idPrecision": 1,
+          "docs": {
+            "TP": 294,
+            "FP": 0,
+            "FN": 0,
+            "TN": 6
+          }
+        },
+        {
+          "compaction": "lossy: keep first half",
+          "trueLostIds": 3179,
+          "reported": 3179,
+          "idRecall": 1,
+          "idPrecision": 1,
+          "docs": {
+            "TP": 300,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0
+          }
+        },
+        {
+          "compaction": "lossy: remove one id per sentence",
+          "trueLostIds": 4425,
+          "reported": 4425,
+          "idRecall": 1,
+          "idPrecision": 1,
+          "docs": {
+            "TP": 300,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0
+          }
+        },
+        {
+          "compaction": "lossy: alter 1 char/segment of ids",
+          "trueLostIds": 3364,
+          "reported": 3364,
+          "idRecall": 1,
+          "idPrecision": 1,
+          "docs": {
+            "TP": 300,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0
+          }
+        }
+      ]
+    },
+    "wild": {
+      "extraction": {
+        "ids": 6548,
+        "recall": 0.5054978619425778,
+        "precision": 1,
+        "falsePositives": 0,
+        "recallByType": {
+          "url": 1,
+          "version": 1,
+          "hashUpper": 0,
+          "func": 0,
+          "path": 1,
+          "hash6": 0,
+          "issue": 1,
+          "code": 1,
+          "ticket": 0,
+          "hash": 1
+        }
+      },
+      "loss": [
+        {
+          "compaction": "benign: drop filler words",
+          "trueLostIds": 0,
+          "reported": 0,
+          "idRecall": null,
+          "idPrecision": null,
+          "docs": {
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 300
+          }
+        },
+        {
+          "compaction": "benign: drop id-free sentences",
+          "trueLostIds": 0,
+          "reported": 0,
+          "idRecall": null,
+          "idPrecision": null,
+          "docs": {
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 300
+          }
+        },
+        {
+          "compaction": "benign: strip backticks + collapse",
+          "trueLostIds": 0,
+          "reported": 0,
+          "idRecall": null,
+          "idPrecision": null,
+          "docs": {
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 300
+          }
+        },
+        {
+          "compaction": "lossy: drop 30% of sentences",
+          "trueLostIds": 2070,
+          "reported": 1031,
+          "idRecall": 0.4980676328502415,
+          "idPrecision": 1,
+          "docs": {
+            "TP": 272,
+            "FP": 0,
+            "FN": 22,
+            "TN": 6
+          }
+        },
+        {
+          "compaction": "lossy: keep first half",
+          "trueLostIds": 3186,
+          "reported": 1605,
+          "idRecall": 0.5037664783427496,
+          "idPrecision": 1,
+          "docs": {
+            "TP": 294,
+            "FP": 0,
+            "FN": 6,
+            "TN": 0
+          }
+        },
+        {
+          "compaction": "lossy: remove one id per sentence",
+          "trueLostIds": 4343,
+          "reported": 2218,
+          "idRecall": 0.5107068846419526,
+          "idPrecision": 1,
+          "docs": {
+            "TP": 300,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0
+          }
+        },
+        {
+          "compaction": "lossy: alter 1 char/segment of ids",
+          "trueLostIds": 3317,
+          "reported": 1689,
+          "idRecall": 0.5091950557732892,
+          "idPrecision": 1,
+          "docs": {
+            "TP": 296,
+            "FP": 0,
+            "FN": 4,
+            "TN": 0
+          }
+        }
+      ]
+    }
+  },
+  "drift": [
+    {
+      "injectionRate": 0.1,
+      "injected": 702,
+      "recall": 1,
+      "precision": 1,
+      "residualAfterNormalize": 0,
+      "roundTripExact": 1,
+      "falsePositivesOnCleanDocs": 0,
+      "surfaceFormsBefore": 9.736666666666666,
+      "surfaceFormsAfter": 7.666666666666667
+    },
+    {
+      "injectionRate": 0.3,
+      "injected": 2202,
+      "recall": 1,
+      "precision": 1,
+      "residualAfterNormalize": 0,
+      "roundTripExact": 1,
+      "falsePositivesOnCleanDocs": 0,
+      "surfaceFormsBefore": 13.13,
+      "surfaceFormsAfter": 7.66
+    },
+    {
+      "injectionRate": 0.5,
+      "injected": 3550,
+      "recall": 1,
+      "precision": 1,
+      "residualAfterNormalize": 0,
+      "roundTripExact": 1,
+      "falsePositivesOnCleanDocs": 0,
+      "surfaceFormsBefore": 15.173333333333334,
+      "surfaceFormsAfter": 7.656666666666666
+    },
+    {
+      "injectionRate": 1,
+      "injected": 7200,
+      "recall": 1,
+      "precision": 1,
+      "residualAfterNormalize": 0,
+      "roundTripExact": 1,
+      "falsePositivesOnCleanDocs": 0,
+      "surfaceFormsBefore": 14.003333333333334,
+      "surfaceFormsAfter": 7.666666666666667
+    }
+  ],
+  "timing": [
+    {
+      "sizeKB": 1,
+      "extractMs": 0.07978400000001784,
+      "checkMs": 0.18701699999974153,
+      "checksumMs": 0.09183299999995143,
+      "lintMs": 0.10286499999983789,
+      "normalizeMs": 0.09927999999990789
+    },
+    {
+      "sizeKB": 10,
+      "extractMs": 0.9576810000003206,
+      "checkMs": 2.005590000000211,
+      "checksumMs": 0.9662230000003547,
+      "lintMs": 0.9748760000002221,
+      "normalizeMs": 0.9690399999999499
+    },
+    {
+      "sizeKB": 100,
+      "extractMs": 23.820182000000386,
+      "checkMs": 33.145910999999614,
+      "checksumMs": 23.365794999999707,
+      "lintMs": 24.184708000000683,
+      "normalizeMs": 25.18209999999999
+    },
+    {
+      "sizeKB": 1000,
+      "extractMs": 236.89460300000064,
+      "checkMs": 492.57719,
+      "checksumMs": 166.76643999999942,
+      "lintMs": 219.44846999999936,
+      "normalizeMs": 185.7602709999992
+    }
+  ]
+}
