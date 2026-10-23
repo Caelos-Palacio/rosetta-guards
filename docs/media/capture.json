@@ -1,0 +1,24 @@
+{
+  "files": {
+    "original.md": "Fix for #482: the session cache in `src/auth/session.mjs` leaked tokens.\nRolled out in v2.4.1 (commit 9f3c2ab) - see https://example.com/postmortem/482.\n",
+    "compacted.md": "Fixed the session cache leak (#482), released in v2.4.1 (commit 9f3c2ba).\n",
+    "fixed.md": "Fixed the session cache leak (#482) in `src/auth/session.mjs`, released in v2.4.1 (commit 9f3c2ab). https://example.com/postmortem/482\n"
+  },
+  "steps": [
+    {
+      "cmd": "rosetta ids original.md",
+      "out": "hash\t9f3c2ab\nissue\t#482\npath\tsrc/auth/session.mjs\nurl\thttps://example.com/postmortem/482\nversion\tv2.4.1\nchecksum 622644d9b6c4b7afd58278f90adbe6d095113a0ff97c30d8e484c82db945f110",
+      "rc": 0
+    },
+    {
+      "cmd": "rosetta check original.md compacted.md",
+      "out": "ALTERED hash 9f3c2ab  (derived has: 9f3c2ba)\nMISSING path src/auth/session.mjs\nMISSING url https://example.com/postmortem/482\nLOSS: 3 of 5 identifiers lost",
+      "rc": 1
+    },
+    {
+      "cmd": "rosetta check original.md fixed.md",
+      "out": "OK: all 5 identifiers preserved",
+      "rc": 0
+    }
+  ]
+}
